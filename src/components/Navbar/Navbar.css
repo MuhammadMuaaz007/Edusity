@@ -1,0 +1,93 @@
+nav{
+    width: 100%;
+    color: #fff;
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+.logo{
+  width: 180px;
+}
+/* nav ul li{
+  list-style: none;
+  margin: 5px 20px;
+  display: inline-block;
+} */
+.dark-nav{
+  background-color: #212EA0;
+  transition: 0.5s;
+}
+nav ul li {
+  list-style: none;
+  margin: 5px 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
+nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+.menu_icon {
+    display: none;
+ 
+  }
+
+nav ul li:hover {
+  color: #FFD700; /* Optional: Change text color on hover */
+}
+
+
+ /*........Media Query ........*/
+@media (max-width:950px){
+  nav ul li{
+     margin: 10px 15px;
+  }
+  .logo{
+  width: 140px;
+}
+}
+@media (max-width:840px){
+
+nav{
+  padding: 15px 0;
+}
+nav ul{
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+width: 200px;
+background-color: #212EA0;
+transition: 0.5s;
+padding-top: 70px;
+}
+nav ul li{
+  display: block;
+  margin: 25px 40px;
+
+}
+.menu_icon {
+    display: block;
+    width: 30px;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+    cursor: pointer;
+  }
+  .hide-mobile-menu{
+    right: -200px;
+  }
+}
